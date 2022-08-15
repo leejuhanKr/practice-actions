@@ -6,7 +6,18 @@ on:
       - main
 
 jobs:
-  test:
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: lint test
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: '16'
+  #     - run: npm install
+  #     - run: npx eslint src
+  
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,4 +26,5 @@ jobs:
         with:
           node-version: '16'
       - run: npm install
-      - run: npx eslint src
+      - run: npm run build
+    
