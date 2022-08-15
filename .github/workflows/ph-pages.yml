@@ -17,14 +17,14 @@ jobs:
   #     - run: npm install
   #     - run: npx eslint src
   
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: lint test
-        uses: actions/setup-node@v1
-        with:
-          node-version: '16'
-      - run: npm install
-      - run: npm run build
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: build
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: '16'
+  #     - run: npm install
+  #     - run: npm run build
     
